@@ -96,6 +96,7 @@ namespace bibliotecaVideojuegos
             this.pb_image.Location = new System.Drawing.Point(32, 12);
             this.pb_image.Name = "pb_image";
             this.pb_image.Size = new System.Drawing.Size(135, 228);
+            this.pb_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_image.TabIndex = 4;
             this.pb_image.TabStop = false;
             // 
