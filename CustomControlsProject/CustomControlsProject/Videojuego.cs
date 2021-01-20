@@ -17,7 +17,7 @@ namespace CustomControlsProject
 
         string name;
         string path;
-        Image image;
+        string imagePath;
 
         //Constructors
 
@@ -48,7 +48,7 @@ namespace CustomControlsProject
             lb_name.Text = name;
         }
 
-        public Videojuego(string path, string name, Image image)
+        public Videojuego(string path, string name, string imagePath)
         {
             InitializeComponent();
             lb_name.Parent = pb_Image;
@@ -56,10 +56,10 @@ namespace CustomControlsProject
 
             this.path = path;
             this.name = name;
-            this.image = image;
+            this.imagePath = imagePath;
 
             lb_name.Text = name;
-            pb_Image.Image = image;
+            pb_Image.Load(imagePath);
         }
 
         //Actions
@@ -91,9 +91,9 @@ namespace CustomControlsProject
             return path;
         }
 
-        public Image GetImage()
+        public string GetImagePath()
         {
-            return image;
+            return imagePath;
         }
 
         //Setters
@@ -108,9 +108,9 @@ namespace CustomControlsProject
             this.path = path;
         }
 
-        public void SetImage(Image image)
+        public void SetImage(string imagePath)
         {
-            this.image = image;
+            this.imagePath = imagePath;
         }
     }
 }
