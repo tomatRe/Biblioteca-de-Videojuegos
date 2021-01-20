@@ -92,6 +92,7 @@ namespace bibliotecaVideojuegos
             // 
             // pb_image
             // 
+            this.pb_image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pb_image.Location = new System.Drawing.Point(32, 12);
             this.pb_image.Name = "pb_image";
             this.pb_image.Size = new System.Drawing.Size(135, 228);
