@@ -82,7 +82,8 @@
             // 
             this.bt_add.Name = "bt_add";
             this.bt_add.Size = new System.Drawing.Size(183, 22);
-            this.bt_add.Text = "Importar Videojuego";
+            this.bt_add.Text = "Añadir Videojuego";
+            this.bt_add.Click += new System.EventHandler(this.bt_add_Click);
             // 
             // bt_exit
             // 
