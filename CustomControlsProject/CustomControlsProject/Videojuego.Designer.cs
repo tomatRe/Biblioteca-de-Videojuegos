@@ -41,9 +41,10 @@
             this.pb_Image.InitialImage = ((System.Drawing.Image)(resources.GetObject("pb_Image.InitialImage")));
             this.pb_Image.Location = new System.Drawing.Point(0, 0);
             this.pb_Image.Name = "pb_Image";
-            this.pb_Image.Size = new System.Drawing.Size(185, 286);
+            this.pb_Image.Size = new System.Drawing.Size(180, 280);
             this.pb_Image.TabIndex = 0;
             this.pb_Image.TabStop = false;
+            this.pb_Image.Click += new System.EventHandler(this.pb_Image_Click);
             // 
             // lb_name
             // 
@@ -58,6 +59,7 @@
             this.lb_name.TabIndex = 1;
             this.lb_name.Text = "Untitled Game";
             this.lb_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lb_name.Click += new System.EventHandler(this.pb_Image_Click);
             // 
             // Videojuego
             // 

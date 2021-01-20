@@ -7,14 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace CustomControlsProject
 {
     public partial class Videojuego: UserControl
     {
+        //Properties
+
         string name;
         string path;
         Image image;
+
+        //Constructors
+
+        public Videojuego()
+        {
+            InitializeComponent();
+            lb_name.Parent = pb_Image;
+            lb_name.BackColor = Color.Transparent;
+            path = "";
+        }
 
         public Videojuego(string path)
         {
@@ -47,6 +60,23 @@ namespace CustomControlsProject
 
             lb_name.Text = name;
             pb_Image.Image = image;
+        }
+
+        //Actions
+
+        private void pb_Image_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(path);
+            }
+            catch(Exception exception)
+            {
+                MessageBox.Show("Error al abrir el elemento", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                Console.WriteLine(exception.StackTrace);
+            }
         }
 
         //Getters
