@@ -108,12 +108,12 @@
             // 
             this.lb_library.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lb_library.AutoSize = true;
-            this.lb_library.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_library.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_library.ForeColor = System.Drawing.SystemColors.Window;
-            this.lb_library.Location = new System.Drawing.Point(248, 31);
+            this.lb_library.Location = new System.Drawing.Point(225, 24);
             this.lb_library.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_library.Name = "lb_library";
-            this.lb_library.Size = new System.Drawing.Size(88, 20);
+            this.lb_library.Size = new System.Drawing.Size(142, 28);
             this.lb_library.TabIndex = 2;
             this.lb_library.Text = "Biblioteca";
             this.lb_library.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -122,7 +122,7 @@
             // 
             this.lb_empty.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_empty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_empty.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_empty.ForeColor = System.Drawing.Color.DimGray;
             this.lb_empty.Location = new System.Drawing.Point(184, 206);
             this.lb_empty.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -136,11 +136,12 @@
             // 
             this.lb_addGame.ActiveLinkColor = System.Drawing.Color.Silver;
             this.lb_addGame.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lb_addGame.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_addGame.LinkColor = System.Drawing.Color.Gray;
-            this.lb_addGame.Location = new System.Drawing.Point(227, 273);
+            this.lb_addGame.Location = new System.Drawing.Point(212, 273);
             this.lb_addGame.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_addGame.Name = "lb_addGame";
-            this.lb_addGame.Size = new System.Drawing.Size(139, 14);
+            this.lb_addGame.Size = new System.Drawing.Size(165, 14);
             this.lb_addGame.TabIndex = 4;
             this.lb_addGame.TabStop = true;
             this.lb_addGame.Text = "Añade tu Primer Videojuego";
@@ -165,7 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(43)))));
             this.ClientSize = new System.Drawing.Size(603, 375);
             this.Controls.Add(this.pb_empty);
             this.Controls.Add(this.lb_addGame);
