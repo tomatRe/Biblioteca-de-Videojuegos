@@ -89,6 +89,7 @@ namespace bibliotecaVideojuegos
                 {
                     using (StreamWriter sw = File.CreateText(preferencesPath))
                     {
+                        sw.WriteLine();
                         sw.WriteLine(GameData);
                     }
                 }
