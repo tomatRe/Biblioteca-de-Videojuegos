@@ -32,8 +32,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lb_library = new System.Windows.Forms.Label();
+            this.importarVideojuegoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preferenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,22 +64,19 @@
             // archivoToolStripMenuItem
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.importarVideojuegoToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(73, 26);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // editarToolStripMenuItem
             // 
+            this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.preferenciasToolStripMenuItem});
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(62, 26);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.editarToolStripMenuItem.Text = "Editar";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.salirToolStripMenuItem.Text = "Salir";
             // 
             // lb_library
             // 
@@ -91,6 +90,24 @@
             this.lb_library.TabIndex = 2;
             this.lb_library.Text = "Biblioteca";
             this.lb_library.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // importarVideojuegoToolStripMenuItem
+            // 
+            this.importarVideojuegoToolStripMenuItem.Name = "importarVideojuegoToolStripMenuItem";
+            this.importarVideojuegoToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
+            this.importarVideojuegoToolStripMenuItem.Text = "Importar Videojuego";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
+            this.salirToolStripMenuItem.Text = "Salir";
+            // 
+            // preferenciasToolStripMenuItem
+            // 
+            this.preferenciasToolStripMenuItem.Name = "preferenciasToolStripMenuItem";
+            this.preferenciasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.preferenciasToolStripMenuItem.Text = "Preferencias";
             // 
             // MainScreen
             // 
@@ -117,8 +134,10 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.Label lb_library;
+        private System.Windows.Forms.ToolStripMenuItem importarVideojuegoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem preferenciasToolStripMenuItem;
     }
 }
 
