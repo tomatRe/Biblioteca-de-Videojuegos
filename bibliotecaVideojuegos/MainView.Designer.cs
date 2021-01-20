@@ -32,8 +32,8 @@
             this.flp_panel = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importarVideojuegoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bt_add = new System.Windows.Forms.ToolStripMenuItem();
+            this.bt_exit = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.preferenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lb_library = new System.Windows.Forms.Label();
@@ -72,23 +72,23 @@
             // archivoToolStripMenuItem
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.importarVideojuegoToolStripMenuItem,
-            this.salirToolStripMenuItem});
+            this.bt_add,
+            this.bt_exit});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
-            // importarVideojuegoToolStripMenuItem
+            // bt_add
             // 
-            this.importarVideojuegoToolStripMenuItem.Name = "importarVideojuegoToolStripMenuItem";
-            this.importarVideojuegoToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.importarVideojuegoToolStripMenuItem.Text = "Importar Videojuego";
+            this.bt_add.Name = "bt_add";
+            this.bt_add.Size = new System.Drawing.Size(183, 22);
+            this.bt_add.Text = "Importar Videojuego";
             // 
-            // salirToolStripMenuItem
+            // bt_exit
             // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
+            this.bt_exit.Name = "bt_exit";
+            this.bt_exit.Size = new System.Drawing.Size(183, 22);
+            this.bt_exit.Text = "Salir";
             // 
             // editarToolStripMenuItem
             // 
@@ -101,7 +101,7 @@
             // preferenciasToolStripMenuItem
             // 
             this.preferenciasToolStripMenuItem.Name = "preferenciasToolStripMenuItem";
-            this.preferenciasToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.preferenciasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.preferenciasToolStripMenuItem.Text = "Preferencias";
             // 
             // lb_library
@@ -193,8 +193,8 @@
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
         private System.Windows.Forms.Label lb_library;
-        private System.Windows.Forms.ToolStripMenuItem importarVideojuegoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bt_add;
+        private System.Windows.Forms.ToolStripMenuItem bt_exit;
         private System.Windows.Forms.ToolStripMenuItem preferenciasToolStripMenuItem;
         private System.Windows.Forms.Label lb_empty;
         private System.Windows.Forms.LinkLabel lb_addGame;
