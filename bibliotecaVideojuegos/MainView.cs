@@ -143,5 +143,11 @@ namespace bibliotecaVideojuegos
             AddView addGame = new AddView();
             addGame.ShowDialog();
         }
+
+        private void bt_add_Click(object sender, EventArgs e)
+        {
+            AddView addGame = new AddView();
+            addGame.ShowDialog();
+        }
     }
 }
