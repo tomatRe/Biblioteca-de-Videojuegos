@@ -53,6 +53,7 @@ namespace bibliotecaVideojuegos
             this.bt_add.TabIndex = 0;
             this.bt_add.Text = "Añadir";
             this.bt_add.UseVisualStyleBackColor = false;
+            this.bt_add.Click += new System.EventHandler(this.bt_add_Click);
             // 
             // bt_cancel
             // 
@@ -65,6 +66,7 @@ namespace bibliotecaVideojuegos
             this.bt_cancel.TabIndex = 1;
             this.bt_cancel.Text = "Cancelar";
             this.bt_cancel.UseVisualStyleBackColor = false;
+            this.bt_cancel.Click += new System.EventHandler(this.bt_cancel_Click);
             // 
             // tb_ImagePath
             // 
@@ -86,12 +88,13 @@ namespace bibliotecaVideojuegos
             this.bt_imagePath.TabIndex = 3;
             this.bt_imagePath.Text = "Ruta de la Imagen";
             this.bt_imagePath.UseVisualStyleBackColor = false;
+            this.bt_imagePath.Click += new System.EventHandler(this.bt_imagePath_Click);
             // 
             // pb_image
             // 
             this.pb_image.Location = new System.Drawing.Point(32, 12);
             this.pb_image.Name = "pb_image";
-            this.pb_image.Size = new System.Drawing.Size(162, 203);
+            this.pb_image.Size = new System.Drawing.Size(135, 228);
             this.pb_image.TabIndex = 4;
             this.pb_image.TabStop = false;
             // 
@@ -122,9 +125,9 @@ namespace bibliotecaVideojuegos
             // 
             this.lb_gameName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_gameName.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_gameName.Location = new System.Drawing.Point(234, 53);
+            this.lb_gameName.Location = new System.Drawing.Point(173, 12);
             this.lb_gameName.Name = "lb_gameName";
-            this.lb_gameName.Size = new System.Drawing.Size(313, 95);
+            this.lb_gameName.Size = new System.Drawing.Size(374, 228);
             this.lb_gameName.TabIndex = 7;
             this.lb_gameName.Text = "Videojuego";
             this.lb_gameName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

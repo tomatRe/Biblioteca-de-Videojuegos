@@ -21,5 +21,20 @@ namespace bibliotecaVideojuegos
         {
 
         }
+
+        private void bt_imagePath_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_cancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_add_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
