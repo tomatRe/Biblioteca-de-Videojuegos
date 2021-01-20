@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flp_panel = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importarVideojuegoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,17 +44,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_empty)).BeginInit();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // flp_panel
             // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.flp_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(9, 53);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(584, 306);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.flp_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.flp_panel.Location = new System.Drawing.Point(9, 53);
+            this.flp_panel.Margin = new System.Windows.Forms.Padding(2);
+            this.flp_panel.Name = "flp_panel";
+            this.flp_panel.Size = new System.Drawing.Size(584, 306);
+            this.flp_panel.TabIndex = 0;
             // 
             // menuStrip1
             // 
@@ -171,7 +171,7 @@
             this.Controls.Add(this.lb_addGame);
             this.Controls.Add(this.lb_empty);
             this.Controls.Add(this.lb_library);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.flp_panel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -188,7 +188,7 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flp_panel;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
