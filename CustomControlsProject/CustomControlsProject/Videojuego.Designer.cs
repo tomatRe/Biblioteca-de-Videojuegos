@@ -40,8 +40,10 @@
             this.pb_Image.Image = ((System.Drawing.Image)(resources.GetObject("pb_Image.Image")));
             this.pb_Image.InitialImage = ((System.Drawing.Image)(resources.GetObject("pb_Image.InitialImage")));
             this.pb_Image.Location = new System.Drawing.Point(0, 0);
+            this.pb_Image.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pb_Image.Name = "pb_Image";
             this.pb_Image.Size = new System.Drawing.Size(180, 280);
+            this.pb_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Image.TabIndex = 0;
             this.pb_Image.TabStop = false;
             this.pb_Image.Click += new System.EventHandler(this.pb_Image_Click);
