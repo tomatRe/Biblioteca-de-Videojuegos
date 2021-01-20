@@ -117,7 +117,8 @@ namespace bibliotecaVideojuegos
 
         private void lb_addGame_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            AddView addGame = new AddView();
+            addGame.ShowDialog();
         }
     }
 }
