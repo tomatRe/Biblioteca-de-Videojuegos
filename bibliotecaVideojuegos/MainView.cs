@@ -57,9 +57,16 @@ namespace bibliotecaVideojuegos
         public void LoadGames()
         {
             LoadPaths();
-            foreach (string str in gamePaths)
+
+            if (gamePaths.Count > 0)
             {
-                juegos.Add(new Videojuego(str));
+                HideEmptyLibraryHint();
+
+                foreach (string str in gamePaths)
+                {
+                    juegos.Add(new Videojuego(str));
+                    flp_panel.Controls.Add(new Videojuego(str));
+                }
             }
         }
 
@@ -74,6 +81,31 @@ namespace bibliotecaVideojuegos
                     gamePaths.Add(str);
                 }
             }
+        }
+
+        public void HideEmptyLibraryHint()
+        {
+            lb_addGame.Enabled = false;
+            lb_addGame.Visible = false;
+
+            lb_empty.Enabled = false;
+            lb_empty.Visible = false;
+
+            pb_empty.Enabled = false;
+            pb_empty.Visible = false;
+        }
+
+        //Show the labels, button and image
+        public void ShowEmptyLibraryHint()
+        {
+            lb_addGame.Enabled = true;
+            lb_addGame.Visible = true;
+
+            lb_empty.Enabled = true;
+            lb_empty.Visible = true;
+
+            pb_empty.Enabled = true;
+            pb_empty.Visible = true;
         }
 
         private void lb_addGame_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
