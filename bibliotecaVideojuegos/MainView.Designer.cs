@@ -50,9 +50,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 65);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(9, 53);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(778, 376);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(584, 306);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // menuStrip1
@@ -63,7 +64,8 @@
             this.editarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(802, 30);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(603, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -73,19 +75,19 @@
             this.importarVideojuegoToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(73, 26);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // importarVideojuegoToolStripMenuItem
             // 
             this.importarVideojuegoToolStripMenuItem.Name = "importarVideojuegoToolStripMenuItem";
-            this.importarVideojuegoToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
+            this.importarVideojuegoToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.importarVideojuegoToolStripMenuItem.Text = "Importar Videojuego";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // editarToolStripMenuItem
@@ -93,24 +95,25 @@
             this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.preferenciasToolStripMenuItem});
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(62, 26);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.editarToolStripMenuItem.Text = "Editar";
             // 
             // preferenciasToolStripMenuItem
             // 
             this.preferenciasToolStripMenuItem.Name = "preferenciasToolStripMenuItem";
-            this.preferenciasToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.preferenciasToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.preferenciasToolStripMenuItem.Text = "Preferencias";
             // 
             // lb_library
             // 
             this.lb_library.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lb_library.AutoSize = true;
-            this.lb_library.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_library.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_library.ForeColor = System.Drawing.SystemColors.Window;
-            this.lb_library.Location = new System.Drawing.Point(331, 38);
+            this.lb_library.Location = new System.Drawing.Point(248, 31);
+            this.lb_library.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_library.Name = "lb_library";
-            this.lb_library.Size = new System.Drawing.Size(130, 24);
+            this.lb_library.Size = new System.Drawing.Size(88, 20);
             this.lb_library.TabIndex = 2;
             this.lb_library.Text = "Biblioteca";
             this.lb_library.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -119,11 +122,12 @@
             // 
             this.lb_empty.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lb_empty.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_empty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_empty.ForeColor = System.Drawing.Color.DimGray;
-            this.lb_empty.Location = new System.Drawing.Point(246, 253);
+            this.lb_empty.Location = new System.Drawing.Point(184, 206);
+            this.lb_empty.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_empty.Name = "lb_empty";
-            this.lb_empty.Size = new System.Drawing.Size(290, 100);
+            this.lb_empty.Size = new System.Drawing.Size(218, 81);
             this.lb_empty.TabIndex = 3;
             this.lb_empty.Text = "Parece que la biblioteca está vacía";
             this.lb_empty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -133,33 +137,36 @@
             this.lb_addGame.ActiveLinkColor = System.Drawing.Color.Silver;
             this.lb_addGame.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lb_addGame.LinkColor = System.Drawing.Color.Gray;
-            this.lb_addGame.Location = new System.Drawing.Point(303, 336);
+            this.lb_addGame.Location = new System.Drawing.Point(227, 273);
+            this.lb_addGame.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_addGame.Name = "lb_addGame";
-            this.lb_addGame.Size = new System.Drawing.Size(185, 17);
+            this.lb_addGame.Size = new System.Drawing.Size(139, 14);
             this.lb_addGame.TabIndex = 4;
             this.lb_addGame.TabStop = true;
             this.lb_addGame.Text = "Añade tu Primer Videojuego";
             this.lb_addGame.VisitedLinkColor = System.Drawing.Color.Gray;
+            this.lb_addGame.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lb_addGame_LinkClicked);
             // 
             // pb_empty
             // 
             this.pb_empty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pb_empty.Image = ((System.Drawing.Image)(resources.GetObject("pb_empty.Image")));
-            this.pb_empty.Location = new System.Drawing.Point(282, 83);
-            this.pb_empty.MaximumSize = new System.Drawing.Size(220, 170);
-            this.pb_empty.MinimumSize = new System.Drawing.Size(220, 170);
+            this.pb_empty.Location = new System.Drawing.Point(212, 67);
+            this.pb_empty.Margin = new System.Windows.Forms.Padding(2);
+            this.pb_empty.MaximumSize = new System.Drawing.Size(165, 138);
+            this.pb_empty.MinimumSize = new System.Drawing.Size(165, 138);
             this.pb_empty.Name = "pb_empty";
-            this.pb_empty.Size = new System.Drawing.Size(220, 170);
+            this.pb_empty.Size = new System.Drawing.Size(165, 138);
             this.pb_empty.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_empty.TabIndex = 5;
             this.pb_empty.TabStop = false;
             // 
             // MainScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(802, 453);
+            this.ClientSize = new System.Drawing.Size(603, 375);
             this.Controls.Add(this.pb_empty);
             this.Controls.Add(this.lb_addGame);
             this.Controls.Add(this.lb_empty);
@@ -167,7 +174,8 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(820, 500);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(619, 414);
             this.Name = "MainScreen";
             this.Text = "Biblioteca";
             this.menuStrip1.ResumeLayout(false);
