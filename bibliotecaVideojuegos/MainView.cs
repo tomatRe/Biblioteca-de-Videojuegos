@@ -68,8 +68,31 @@ namespace bibliotecaVideojuegos
 
                 foreach (string str in gamePaths)
                 {
-                    juegos.Add(new Videojuego(str));
-                    flp_panel.Controls.Add(new Videojuego(str));
+                    if (str.Split(';').Count() == 3 && str.Split(';')[2] != "")
+                    {
+                        string[] data =
+                        {
+                            str.Split(';')[0],
+                            str.Split(';')[1],
+                            str.Split(';')[2]
+                        };
+
+                        juegos.Add(new Videojuego(data[0], data[1], data[2]));
+                        flp_panel.Controls.Add(new Videojuego(data[0], data[1], data[2]));
+                    }
+                    else if (str.Split(';').Count() == 3 && str.Split(';')[2] == "")
+                    {
+
+                        string[] data =
+                        {
+                            str.Split(';')[0],
+                            str.Split(';')[1],
+                            str.Split(';')[2]
+                        };
+
+                        juegos.Add(new Videojuego(data[0], data[1]));
+                        flp_panel.Controls.Add(new Videojuego(data[0], data[1]));
+                    }
                 }
             }
         }
