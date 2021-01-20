@@ -27,6 +27,8 @@ namespace bibliotecaVideojuegos
             LoadGames();
         }
 
+        //Save the stored games information on a file
+
         public void SavePreferences(string[] preferences)
         {
             try
@@ -54,6 +56,8 @@ namespace bibliotecaVideojuegos
             }
         }
 
+
+        //Load the stored games information
         public void LoadGames()
         {
             LoadPaths();
@@ -70,6 +74,7 @@ namespace bibliotecaVideojuegos
             }
         }
 
+        //Loads the games path only
         private void LoadPaths()
         {
             if (File.Exists(preferencesPath))
@@ -82,6 +87,8 @@ namespace bibliotecaVideojuegos
                 }
             }
         }
+
+        //Hide the labels, button and image
 
         public void HideEmptyLibraryHint()
         {
