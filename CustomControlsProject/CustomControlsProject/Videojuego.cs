@@ -19,6 +19,10 @@ namespace CustomControlsProject
         string path;
         string imagePath;
 
+        public event EventHandler runHandler;
+        public event EventHandler propertiesHandler;
+        public event EventHandler deleteHandler;
+
         //Constructors
 
         public Videojuego()
@@ -111,6 +115,21 @@ namespace CustomControlsProject
         public void SetImage(string imagePath)
         {
             this.imagePath = imagePath;
+        }
+
+        private void tsmi_run_Click(object sender, EventArgs e)
+        {
+            runHandler?.Invoke(this, e);
+        }
+
+        private void tsmi_properties_Click(object sender, EventArgs e)
+        {
+            propertiesHandler?.Invoke(this, e);
+        }
+
+        private void tsmi_delete_Click(object sender, EventArgs e)
+        {
+            deleteHandler?.Invoke(this, e);
         }
     }
 }

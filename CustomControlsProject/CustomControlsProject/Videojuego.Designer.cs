@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Videojuego));
             this.pb_Image = new System.Windows.Forms.PictureBox();
             this.lb_name = new System.Windows.Forms.Label();
+            this.cms_properties = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmi_run = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmi_properties = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmi_delete = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Image)).BeginInit();
+            this.cms_properties.SuspendLayout();
             this.SuspendLayout();
             // 
             // pb_Image
@@ -63,6 +69,36 @@
             this.lb_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lb_name.Click += new System.EventHandler(this.pb_Image_Click);
             // 
+            // cms_properties
+            // 
+            this.cms_properties.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmi_run,
+            this.tsmi_properties,
+            this.tsmi_delete});
+            this.cms_properties.Name = "cms_properties";
+            this.cms_properties.Size = new System.Drawing.Size(181, 92);
+            // 
+            // tsmi_run
+            // 
+            this.tsmi_run.Name = "tsmi_run";
+            this.tsmi_run.Size = new System.Drawing.Size(180, 22);
+            this.tsmi_run.Text = "Ejecutar";
+            this.tsmi_run.Click += new System.EventHandler(this.tsmi_run_Click);
+            // 
+            // tsmi_properties
+            // 
+            this.tsmi_properties.Name = "tsmi_properties";
+            this.tsmi_properties.Size = new System.Drawing.Size(180, 22);
+            this.tsmi_properties.Text = "Propiedades";
+            this.tsmi_properties.Click += new System.EventHandler(this.tsmi_properties_Click);
+            // 
+            // tsmi_delete
+            // 
+            this.tsmi_delete.Name = "tsmi_delete";
+            this.tsmi_delete.Size = new System.Drawing.Size(180, 22);
+            this.tsmi_delete.Text = "Eliminar";
+            this.tsmi_delete.Click += new System.EventHandler(this.tsmi_delete_Click);
+            // 
             // Videojuego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -72,6 +108,7 @@
             this.Name = "Videojuego";
             this.Size = new System.Drawing.Size(180, 280);
             ((System.ComponentModel.ISupportInitialize)(this.pb_Image)).EndInit();
+            this.cms_properties.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -80,5 +117,9 @@
 
         private System.Windows.Forms.PictureBox pb_Image;
         private System.Windows.Forms.Label lb_name;
+        private System.Windows.Forms.ContextMenuStrip cms_properties;
+        private System.Windows.Forms.ToolStripMenuItem tsmi_run;
+        private System.Windows.Forms.ToolStripMenuItem tsmi_properties;
+        private System.Windows.Forms.ToolStripMenuItem tsmi_delete;
     }
 }
