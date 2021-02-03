@@ -60,6 +60,9 @@ namespace bibliotecaVideojuegos
         //Load the stored games information
         public void LoadGames()
         {
+            flp_panel.Controls.Clear();
+            gamePaths.Clear();
+            juegos.Clear();
             LoadPaths();
 
             if (gamePaths.Count > 0)
@@ -144,19 +147,20 @@ namespace bibliotecaVideojuegos
 
         private void lb_addGame_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AddView addGame = new AddView();
+            AddView addGame = new AddView(this);
             addGame.ShowDialog();
         }
 
         private void bt_add_Click(object sender, EventArgs e)
         {
-            AddView addGame = new AddView();
+            AddView addGame = new AddView(this);
             addGame.ShowDialog();
         }
 
         private void tsmi_run_Click(object sender, EventArgs e)
         {
-
+            Videojuego selected = (Videojuego)sender;
+            MessageBox.Show(selected.GetPath());
         }
 
         private void tsmi_properties_Click(object sender, EventArgs e)

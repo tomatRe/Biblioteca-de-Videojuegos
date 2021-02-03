@@ -13,7 +13,7 @@ namespace bibliotecaVideojuegos
 {
     public partial class AddView : Form
     {
-
+        MainScreen menu;
         static string preferencesPath = "settings.ini";
 
         string gamePath;
@@ -21,9 +21,10 @@ namespace bibliotecaVideojuegos
         string imagePath;
         string args;
 
-        public AddView()
+        public AddView(MainScreen mainScreen)
         {
             InitializeComponent();
+            menu = mainScreen;
         }
 
         private void bt_executablePath_Click(object sender, EventArgs e)
@@ -71,6 +72,7 @@ namespace bibliotecaVideojuegos
             string data = gamePath + args + ";" + gameName + ";" + imagePath;
 
             SaveGameData(data);
+            menu.LoadGames();
             Close();
         }
 
