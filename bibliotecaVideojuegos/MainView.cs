@@ -78,7 +78,9 @@ namespace bibliotecaVideojuegos
                         };
 
                         juegos.Add(new Videojuego(data[0], data[1], data[2]));
-                        flp_panel.Controls.Add(new Videojuego(data[0], data[1], data[2]));
+                        flp_panel.Controls.Add(juegos.Last());
+
+                        juegos.Last().ContextMenuStrip = cms_properties;
                     }
                     else if (str.Split(';').Count() == 3 && str.Split(';')[2] == "")
                     {
@@ -91,7 +93,9 @@ namespace bibliotecaVideojuegos
                         };
 
                         juegos.Add(new Videojuego(data[0], data[1]));
-                        flp_panel.Controls.Add(new Videojuego(data[0], data[1]));
+                        flp_panel.Controls.Add(juegos.Last());
+
+                        juegos.Last().ContextMenuStrip = cms_properties;
                     }
                 }
             }
@@ -148,6 +152,21 @@ namespace bibliotecaVideojuegos
         {
             AddView addGame = new AddView();
             addGame.ShowDialog();
+        }
+
+        private void tsmi_run_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmi_properties_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmi_delete_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
