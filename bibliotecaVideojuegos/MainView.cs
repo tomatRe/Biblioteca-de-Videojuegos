@@ -71,6 +71,8 @@ namespace bibliotecaVideojuegos
 
                 foreach (string str in gamePaths)
                 {
+                    Videojuego juego = null;
+
                     if (str.Split(';').Count() == 3 && str.Split(';')[2] != "")
                     {
                         string[] data =
@@ -80,10 +82,7 @@ namespace bibliotecaVideojuegos
                             str.Split(';')[2]
                         };
 
-                        juegos.Add(new Videojuego(data[0], data[1], data[2]));
-                        flp_panel.Controls.Add(juegos.Last());
-
-                        juegos.Last().ContextMenuStrip = cms_properties;
+                        juego = new Videojuego(data[0], data[1], data[2]);
                     }
                     else if (str.Split(';').Count() == 3 && str.Split(';')[2] == "")
                     {
@@ -95,10 +94,19 @@ namespace bibliotecaVideojuegos
                             str.Split(';')[2]
                         };
 
-                        juegos.Add(new Videojuego(data[0], data[1]));
-                        flp_panel.Controls.Add(juegos.Last());
+                        juego = new Videojuego(data[0], data[1]);
+                    }
 
-                        juegos.Last().ContextMenuStrip = cms_properties;
+                    if (juego != null)
+                    {
+                        juegos.Add(juego);
+                        juego.ContextMenuStrip = cms_properties;
+
+                        juego.runHandler += runHandler;
+                        juego.propertiesHandler += propertiesHandler;
+                        juego.deleteHandler += deleteHandler;
+
+                        flp_panel.Controls.Add(juego);
                     }
                 }
             }
