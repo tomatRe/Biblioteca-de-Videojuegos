@@ -68,7 +68,7 @@ namespace CustomControlsProject
 
         //Actions
 
-        private void pb_Image_Click(object sender, EventArgs e)
+        private void RunGame(object sender, EventArgs e)
         {
             try
             {

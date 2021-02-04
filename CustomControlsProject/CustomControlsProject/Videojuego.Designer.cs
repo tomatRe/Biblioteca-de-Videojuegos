@@ -46,7 +46,7 @@
             this.pb_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Image.TabIndex = 0;
             this.pb_Image.TabStop = false;
-            this.pb_Image.Click += new System.EventHandler(this.pb_Image_Click);
+            this.pb_Image.Click += new System.EventHandler(this.RunGame);
             // 
             // lb_name
             // 
@@ -61,7 +61,7 @@
             this.lb_name.TabIndex = 1;
             this.lb_name.Text = "Untitled Game";
             this.lb_name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lb_name.Click += new System.EventHandler(this.pb_Image_Click);
+            this.lb_name.Click += new System.EventHandler(this.RunGame);
             // 
             // Videojuego
             // 
