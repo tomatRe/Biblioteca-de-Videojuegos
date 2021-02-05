@@ -68,7 +68,7 @@ namespace CustomControlsProject
 
         //Actions
 
-        private void RunGame(object sender, EventArgs e)
+        public void RunGame(object sender, EventArgs e)
         {
             try
             {
