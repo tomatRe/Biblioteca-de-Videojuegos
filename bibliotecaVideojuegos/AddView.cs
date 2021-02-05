@@ -22,10 +22,14 @@ namespace bibliotecaVideojuegos
         string imagePath;
         string args;
 
+        bool newGame;
+        string oldData;
+
         public AddView(MainScreen mainScreen)
         {
             InitializeComponent();
             menu = mainScreen;
+            newGame = true;
         }
 
         public void FillFields(Videojuego v)
@@ -41,6 +45,7 @@ namespace bibliotecaVideojuegos
                 pb_image.Load(imagePath);
 
             this.Text = "Propiedades";
+            newGame = false;
 
         }
 
@@ -87,29 +92,54 @@ namespace bibliotecaVideojuegos
             args = tb_Args.Text;
 
             string data = gamePath + args + ";" + gameName + ";" + imagePath;
+            oldData = data;
 
-            SaveGameData(data);
-            menu.LoadGames();
-            Close();
         }
 
         private void SaveGameData(string GameData)
         {
             try
             {
+                
                 if (File.Exists(preferencesPath))
                 {
-                    using (StreamWriter sw = File.AppendText(preferencesPath))
+                    
+                    if (newGame)
                     {
-                        sw.WriteLine(GameData);
+                        using (StreamWriter sw = File.AppendText(preferencesPath))
+                        {
+                            sw.WriteLine(GameData);
+                        }
+                    }
+                    else
+                    {
+                        string[] lines = File.ReadAllLines(preferencesPath);
+
+                        for (int i = 0; i < lines.Length; i++)
+                        {
+                            if (lines[i] == oldData)
+                            {
+                                lines[i] = GameData;
+                            }
+                        }
+
+                        File.WriteAllLines(preferencesPath, lines);
                     }
                 }
                 else
                 {
                     using (StreamWriter sw = File.CreateText(preferencesPath))
                     {
-                        sw.WriteLine();
-                        sw.WriteLine(GameData);
+
+                        if (newGame)
+                        {
+                            sw.WriteLine();
+                            sw.WriteLine(GameData);
+                        }
+                        else
+                        {
+                            MessageBox.Show("how you got here?");
+                        }
                     }
                 }
             }
