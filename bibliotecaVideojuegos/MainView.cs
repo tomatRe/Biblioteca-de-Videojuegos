@@ -18,6 +18,8 @@ namespace bibliotecaVideojuegos
         List<string> gamePaths;
         List<Videojuego> juegos;
 
+        Videojuego LastSelected;
+
         public MainScreen()
         {
             gamePaths = new List<string>();
@@ -101,15 +103,17 @@ namespace bibliotecaVideojuegos
                     {
                         juegos.Add(juego);
                         juego.ContextMenuStrip = cms_properties;
-
-                        juego.runHandler += runHandler;
-                        juego.propertiesHandler += propertiesHandler;
-                        juego.deleteHandler += deleteHandler;
-
+                        juego.pb_Image.MouseDown += Juego_MouseClick;
                         flp_panel.Controls.Add(juego);
                     }
                 }
             }
+        }
+
+        private void Juego_MouseClick(object sender, MouseEventArgs e)
+        {
+            PictureBox pb_game = (PictureBox)sender;
+            LastSelected = (Videojuego)pb_game.Parent;
         }
 
         //Loads the games path only
