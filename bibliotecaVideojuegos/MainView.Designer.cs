@@ -96,6 +96,7 @@
             this.bt_exit.Name = "bt_exit";
             this.bt_exit.Size = new System.Drawing.Size(217, 26);
             this.bt_exit.Text = "Salir";
+            this.bt_exit.Click += new System.EventHandler(this.bt_exit_Click);
             // 
             // editarToolStripMenuItem
             // 

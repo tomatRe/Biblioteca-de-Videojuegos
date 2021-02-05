@@ -185,5 +185,10 @@ namespace bibliotecaVideojuegos
         {
 
         }
+
+        private void bt_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
