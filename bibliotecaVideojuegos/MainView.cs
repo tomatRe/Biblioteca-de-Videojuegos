@@ -171,7 +171,10 @@ namespace bibliotecaVideojuegos
 
         private void tsmi_run_Click(object sender, EventArgs e)
         {
-            LastSelected.RunGame(sender, e);
+            if (LastSelected != null)
+            {
+                LastSelected.RunGame(sender, e);
+            }
         }
 
         private void tsmi_properties_Click(object sender, EventArgs e)
