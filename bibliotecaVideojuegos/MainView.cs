@@ -186,7 +186,7 @@ namespace bibliotecaVideojuegos
 
         private void tsmi_delete_Click(object sender, EventArgs e)
         {
-
+            //TODO
         }
 
         private void bt_exit_Click(object sender, EventArgs e)
