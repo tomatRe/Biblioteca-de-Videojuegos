@@ -176,7 +176,9 @@ namespace bibliotecaVideojuegos
 
         private void tsmi_properties_Click(object sender, EventArgs e)
         {
-
+            AddView addGame = new AddView(this);
+            addGame.FillFields(LastSelected);
+            addGame.ShowDialog();
         }
 
         private void tsmi_delete_Click(object sender, EventArgs e)

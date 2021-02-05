@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CustomControlsProject;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,22 @@ namespace bibliotecaVideojuegos
         {
             InitializeComponent();
             menu = mainScreen;
+        }
+
+        public void FillFields(Videojuego v)
+        {
+            this.gamePath = v.GetPath();
+            this.gameName = v.GetName();
+            this.imagePath = v.GetImagePath();
+
+            tb_GamePath.Text = gamePath;
+            tb_ImagePath.Text = imagePath;
+
+            if (imagePath != null)
+                pb_image.Load(imagePath);
+
+            this.Text = "Propiedades";
+
         }
 
         private void bt_executablePath_Click(object sender, EventArgs e)
