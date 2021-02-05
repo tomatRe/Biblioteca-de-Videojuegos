@@ -94,6 +94,12 @@ namespace bibliotecaVideojuegos
             string data = gamePath + args + ";" + gameName + ";" + imagePath;
             oldData = data;
 
+            if (FieldsValid())
+            {
+                SaveGameData(data);
+                menu.LoadGames();
+                Close();
+            }
         }
 
         private void SaveGameData(string GameData)
@@ -147,6 +153,20 @@ namespace bibliotecaVideojuegos
             {
                 Console.WriteLine(ex.StackTrace);
             }
+        }
+
+        private bool FieldsValid()
+        {
+            bool result = false;
+            if (gamePath != null && gameName != null)
+            {
+                if (gamePath != "" && gameName != "")
+                {
+                    result = true;
+                }
+            }
+
+            return result;
         }
     }
 }
