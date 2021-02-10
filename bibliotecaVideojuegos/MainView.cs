@@ -1,5 +1,6 @@
 ﻿using CustomControlsProject;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -111,6 +112,8 @@ namespace bibliotecaVideojuegos
             }
         }
 
+
+        //Captures the event when the user clicks the image or the label of an item
         private void Juego_MouseClick(object sender, MouseEventArgs e)
         {
 
@@ -203,7 +206,67 @@ namespace bibliotecaVideojuegos
 
         private void tsmi_delete_Click(object sender, EventArgs e)
         {
-            //TODO
+            try
+            {
+                if (File.Exists(preferencesPath))
+                {
+
+                    //Read All Games
+                    ArrayList lines = new ArrayList();
+                    string[] games = File.ReadAllLines(preferencesPath);
+
+                    //Dump them into a dynaic collection
+                    for (int i = 0; i < games.Length; i++)
+                    {
+                        lines.Add(games[i]);
+                    }
+
+                    //Get the game we need to delete
+                    string line = LastSelected.GetPath() + ";" + LastSelected.GetName() + ";" + LastSelected.GetImagePath();
+
+                    //Seek the game we want to delete
+                    for (int i = 0; i < lines.Count; i++)
+                    {
+                        if ((string)lines[i] == line)
+                        {
+                            //if found, delete it from the list
+                            lines.RemoveAt(i);
+                            //break the loop
+                            i = lines.Count;
+                        }
+                    }
+
+                    //Dump the games back to a normal array
+                    games = new string[lines.Count];
+
+                    for (int i = 0; i < lines.Count; i++)
+                    {
+                        games[i] = (string)lines[i];
+                    }
+
+                    //Confirmation?
+                    if (MessageBox.Show("Desea borrar por completo el elemento",
+                        "Borrado", MessageBoxButtons.OKCancel,
+                        MessageBoxIcon.Question) == DialogResult.OK)
+                    {
+                        //Save the settings file and update the game list
+                        File.WriteAllLines(preferencesPath, games);
+                        LoadGames();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo acceder al archivo de configuración",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+
+                MessageBox.Show(ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void bt_exit_Click(object sender, EventArgs e)
