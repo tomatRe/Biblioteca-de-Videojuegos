@@ -79,6 +79,6 @@
         #endregion
 
         public System.Windows.Forms.PictureBox pb_Image;
-        private System.Windows.Forms.Label lb_name;
+        public System.Windows.Forms.Label lb_name;
     }
 }

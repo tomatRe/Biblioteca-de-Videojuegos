@@ -104,6 +104,7 @@ namespace bibliotecaVideojuegos
                         juegos.Add(juego);
                         juego.ContextMenuStrip = cms_properties;
                         juego.pb_Image.MouseDown += Juego_MouseClick;
+                        juego.lb_name.MouseDown += Juego_MouseClick;
                         flp_panel.Controls.Add(juego);
                     }
                 }
@@ -112,8 +113,24 @@ namespace bibliotecaVideojuegos
 
         private void Juego_MouseClick(object sender, MouseEventArgs e)
         {
-            PictureBox pb_game = (PictureBox)sender;
-            LastSelected = (Videojuego)pb_game.Parent;
+
+            PictureBox pb_game = null;
+            Label lb_game = null;
+
+            try
+            {
+                pb_game = (PictureBox)sender;
+            }
+            catch
+            {
+                lb_game = (Label)sender;
+                Console.WriteLine("User clicked the text label instead of the image");
+            }
+
+            if (pb_game != null)
+                LastSelected = (Videojuego)pb_game.Parent;
+            else
+                LastSelected = (Videojuego)lb_game.Parent.Parent;
         }
 
         //Loads the games path only
