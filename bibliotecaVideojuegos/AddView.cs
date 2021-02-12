@@ -47,6 +47,7 @@ namespace bibliotecaVideojuegos
             this.Text = "Propiedades";
             newGame = false;
 
+            oldData = gamePath + args + ";" + gameName + ";" + imagePath;
         }
 
         private void bt_executablePath_Click(object sender, EventArgs e)
@@ -92,7 +93,6 @@ namespace bibliotecaVideojuegos
             args = tb_Args.Text;
 
             string data = gamePath + args + ";" + gameName + ";" + imagePath;
-            oldData = data;
 
             if (FieldsValid())
             {
