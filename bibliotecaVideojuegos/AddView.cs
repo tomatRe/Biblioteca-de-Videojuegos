@@ -164,6 +164,11 @@ namespace bibliotecaVideojuegos
                 {
                     result = true;
                 }
+                else if (gamePath == "")
+                {
+                    MessageBox.Show("La ruta del ejecutable debe ser valida",
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
             return result;
