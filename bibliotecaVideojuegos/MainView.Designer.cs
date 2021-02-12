@@ -45,6 +45,7 @@
             this.tsmi_run = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_properties = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmi_delete = new System.Windows.Forms.ToolStripMenuItem();
+            this.steamConnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_empty)).BeginInit();
             this.cms_properties.SuspendLayout();
@@ -56,10 +57,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flp_panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flp_panel.Location = new System.Drawing.Point(12, 65);
-            this.flp_panel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flp_panel.Location = new System.Drawing.Point(9, 53);
+            this.flp_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flp_panel.Name = "flp_panel";
-            this.flp_panel.Size = new System.Drawing.Size(778, 376);
+            this.flp_panel.Size = new System.Drawing.Size(584, 306);
             this.flp_panel.TabIndex = 0;
             // 
             // menuStrip1
@@ -70,8 +71,8 @@
             this.editarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(804, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(603, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -81,35 +82,37 @@
             this.bt_add,
             this.bt_exit});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(73, 26);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // bt_add
             // 
             this.bt_add.Name = "bt_add";
-            this.bt_add.Size = new System.Drawing.Size(217, 26);
+            this.bt_add.Size = new System.Drawing.Size(180, 22);
             this.bt_add.Text = "Añadir Videojuego";
             this.bt_add.Click += new System.EventHandler(this.bt_add_Click);
             // 
             // bt_exit
             // 
             this.bt_exit.Name = "bt_exit";
-            this.bt_exit.Size = new System.Drawing.Size(217, 26);
+            this.bt_exit.Size = new System.Drawing.Size(180, 22);
             this.bt_exit.Text = "Salir";
             this.bt_exit.Click += new System.EventHandler(this.bt_exit_Click);
             // 
             // editarToolStripMenuItem
             // 
             this.editarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.preferenciasToolStripMenuItem});
+            this.preferenciasToolStripMenuItem,
+            this.steamConnToolStripMenuItem});
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(62, 26);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.editarToolStripMenuItem.Text = "Editar";
             // 
             // preferenciasToolStripMenuItem
             // 
+            this.preferenciasToolStripMenuItem.Enabled = false;
             this.preferenciasToolStripMenuItem.Name = "preferenciasToolStripMenuItem";
-            this.preferenciasToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.preferenciasToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.preferenciasToolStripMenuItem.Text = "Preferencias";
             // 
             // lb_library
@@ -118,9 +121,10 @@
             this.lb_library.AutoSize = true;
             this.lb_library.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_library.ForeColor = System.Drawing.SystemColors.Window;
-            this.lb_library.Location = new System.Drawing.Point(300, 30);
+            this.lb_library.Location = new System.Drawing.Point(225, 24);
+            this.lb_library.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_library.Name = "lb_library";
-            this.lb_library.Size = new System.Drawing.Size(175, 36);
+            this.lb_library.Size = new System.Drawing.Size(142, 28);
             this.lb_library.TabIndex = 2;
             this.lb_library.Text = "Biblioteca";
             this.lb_library.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -131,9 +135,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_empty.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_empty.ForeColor = System.Drawing.Color.DimGray;
-            this.lb_empty.Location = new System.Drawing.Point(245, 254);
+            this.lb_empty.Location = new System.Drawing.Point(184, 206);
+            this.lb_empty.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_empty.Name = "lb_empty";
-            this.lb_empty.Size = new System.Drawing.Size(291, 100);
+            this.lb_empty.Size = new System.Drawing.Size(218, 81);
             this.lb_empty.TabIndex = 3;
             this.lb_empty.Text = "Parece que la biblioteca está vacía";
             this.lb_empty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,9 +149,10 @@
             this.lb_addGame.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lb_addGame.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_addGame.LinkColor = System.Drawing.Color.Gray;
-            this.lb_addGame.Location = new System.Drawing.Point(283, 336);
+            this.lb_addGame.Location = new System.Drawing.Point(212, 273);
+            this.lb_addGame.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_addGame.Name = "lb_addGame";
-            this.lb_addGame.Size = new System.Drawing.Size(220, 17);
+            this.lb_addGame.Size = new System.Drawing.Size(165, 14);
             this.lb_addGame.TabIndex = 4;
             this.lb_addGame.TabStop = true;
             this.lb_addGame.Text = "Añade tu Primer Videojuego";
@@ -157,12 +163,12 @@
             // 
             this.pb_empty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pb_empty.Image = ((System.Drawing.Image)(resources.GetObject("pb_empty.Image")));
-            this.pb_empty.Location = new System.Drawing.Point(283, 82);
-            this.pb_empty.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pb_empty.MaximumSize = new System.Drawing.Size(220, 170);
-            this.pb_empty.MinimumSize = new System.Drawing.Size(220, 170);
+            this.pb_empty.Location = new System.Drawing.Point(212, 67);
+            this.pb_empty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pb_empty.MaximumSize = new System.Drawing.Size(165, 138);
+            this.pb_empty.MinimumSize = new System.Drawing.Size(165, 138);
             this.pb_empty.Name = "pb_empty";
-            this.pb_empty.Size = new System.Drawing.Size(220, 170);
+            this.pb_empty.Size = new System.Drawing.Size(165, 138);
             this.pb_empty.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_empty.TabIndex = 5;
             this.pb_empty.TabStop = false;
@@ -175,35 +181,42 @@
             this.tsmi_properties,
             this.tsmi_delete});
             this.cms_properties.Name = "cms_properties";
-            this.cms_properties.Size = new System.Drawing.Size(211, 104);
+            this.cms_properties.Size = new System.Drawing.Size(140, 70);
             // 
             // tsmi_run
             // 
             this.tsmi_run.Name = "tsmi_run";
-            this.tsmi_run.Size = new System.Drawing.Size(210, 24);
+            this.tsmi_run.Size = new System.Drawing.Size(139, 22);
             this.tsmi_run.Text = "Ejecutar";
             this.tsmi_run.Click += new System.EventHandler(this.tsmi_run_Click);
             // 
             // tsmi_properties
             // 
             this.tsmi_properties.Name = "tsmi_properties";
-            this.tsmi_properties.Size = new System.Drawing.Size(210, 24);
+            this.tsmi_properties.Size = new System.Drawing.Size(139, 22);
             this.tsmi_properties.Text = "Propiedades";
             this.tsmi_properties.Click += new System.EventHandler(this.tsmi_properties_Click);
             // 
             // tsmi_delete
             // 
             this.tsmi_delete.Name = "tsmi_delete";
-            this.tsmi_delete.Size = new System.Drawing.Size(210, 24);
+            this.tsmi_delete.Size = new System.Drawing.Size(139, 22);
             this.tsmi_delete.Text = "Eliminar";
             this.tsmi_delete.Click += new System.EventHandler(this.tsmi_delete_Click);
             // 
+            // steamConnToolStripMenuItem
+            // 
+            this.steamConnToolStripMenuItem.Enabled = false;
+            this.steamConnToolStripMenuItem.Name = "steamConnToolStripMenuItem";
+            this.steamConnToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.steamConnToolStripMenuItem.Text = "Conectar con Steam";
+            // 
             // MainScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(43)))));
-            this.ClientSize = new System.Drawing.Size(804, 462);
+            this.ClientSize = new System.Drawing.Size(603, 375);
             this.Controls.Add(this.pb_empty);
             this.Controls.Add(this.lb_addGame);
             this.Controls.Add(this.lb_empty);
@@ -211,8 +224,8 @@
             this.Controls.Add(this.flp_panel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(819, 499);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(618, 413);
             this.Name = "MainScreen";
             this.Text = "Biblioteca";
             this.menuStrip1.ResumeLayout(false);
@@ -241,6 +254,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmi_run;
         private System.Windows.Forms.ToolStripMenuItem tsmi_properties;
         private System.Windows.Forms.ToolStripMenuItem tsmi_delete;
+        private System.Windows.Forms.ToolStripMenuItem steamConnToolStripMenuItem;
     }
 }
 
