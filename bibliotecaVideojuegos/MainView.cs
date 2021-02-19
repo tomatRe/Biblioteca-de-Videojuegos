@@ -79,7 +79,7 @@ namespace bibliotecaVideojuegos
             juegos.Clear();
             LoadPaths();
 
-            if (gamePaths.Count > 0 && gamePaths[0] != "")
+            if (gamePaths.Count > 0)
             {
                 HideEmptyLibraryHint();
 
@@ -120,11 +120,6 @@ namespace bibliotecaVideojuegos
                         flp_panel.Controls.Add(juego);
                     }
                 }
-            }
-
-            if(gamePaths.Count == 0 || gamePaths[0] == "")//there are no games
-            {
-                ShowEmptyLibraryHint();
             }
         }
 
