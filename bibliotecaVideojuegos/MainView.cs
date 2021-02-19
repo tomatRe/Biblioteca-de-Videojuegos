@@ -310,5 +310,18 @@ namespace bibliotecaVideojuegos
         {
             this.Close();
         }
+
+        /// <summary>
+        /// Opens the help prompt
+        /// </summary>
+        private void ayudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Mediante este software es posible el tener una colección " +
+                "de videojuegos, con su ruta de ejecución, imagen y nombre del videojuego.\n" +
+                "Para agregar un videojuego nuevo, seleccione archivo - añadir.\n" +
+                "Para editar un item, haga clic derecho sobre el videojuego y editar.\n" +
+                "Para borrar un item, haga clic derecho y borrar."
+                , "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
