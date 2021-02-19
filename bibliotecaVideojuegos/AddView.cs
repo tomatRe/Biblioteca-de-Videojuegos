@@ -12,6 +12,9 @@ using System.Windows.Forms;
 
 namespace bibliotecaVideojuegos
 {
+    /// <summary>
+    /// This class handles the gathering of the information needed for adding a new videogame.
+    /// </summary>
     public partial class AddView : Form
     {
         MainScreen menu;
@@ -25,6 +28,9 @@ namespace bibliotecaVideojuegos
         bool newGame;
         string oldData;
 
+        /// <summary>
+        /// This constructor sets the menu propertie and sets the new game variable to true
+        /// </summary>
         public AddView(MainScreen mainScreen)
         {
             InitializeComponent();
@@ -32,6 +38,9 @@ namespace bibliotecaVideojuegos
             newGame = true;
         }
 
+        /// <summary>
+        /// Fills the fields from the videogame that is passed by parameter.
+        /// </summary>
         public void FillFields(Videojuego v)
         {
             this.gamePath = v.GetPath();
@@ -50,10 +59,13 @@ namespace bibliotecaVideojuegos
             oldData = gamePath + args + ";" + gameName + ";" + imagePath;
         }
 
+        /// <summary>
+        /// Opens a new window to find the videogame executable.
+        /// </summary>
         private void bt_executablePath_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            //dialog.InitialDirectory = "c:\\";
+
             dialog.Filter = "exe Files (*.exe)|*.exe|All Files|*.*";
             dialog.FilterIndex = 1;
             dialog.RestoreDirectory = true;
@@ -67,6 +79,9 @@ namespace bibliotecaVideojuegos
             }
         }
 
+        /// <summary>
+        /// Opens a new window to find the videogame´s image path.
+        /// </summary>
         private void bt_imagePath_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
@@ -83,11 +98,17 @@ namespace bibliotecaVideojuegos
             }
         }
 
+        /// <summary>
+        /// Closes this window.
+        /// </summary>
         private void bt_cancel_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// Saves all the gathered data
+        /// </summary>
         private void bt_add_Click(object sender, EventArgs e)
         {
             args = tb_Args.Text;
@@ -102,6 +123,9 @@ namespace bibliotecaVideojuegos
             }
         }
 
+        /// <summary>
+        /// Stores the string on "settings.ini".
+        /// </summary>
         private void SaveGameData(string GameData)
         {
             try
@@ -155,6 +179,12 @@ namespace bibliotecaVideojuegos
             }
         }
 
+        /// <summary>
+        /// Validates the fields.
+        /// </summary>
+        /// <returns>
+        /// True or false if the fields are not empty.
+        /// </returns>
         private bool FieldsValid()
         {
             bool result = false;

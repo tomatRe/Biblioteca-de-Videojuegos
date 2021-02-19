@@ -11,20 +11,35 @@ using System.Diagnostics;
 
 namespace CustomControlsProject
 {
+    /// <summary>
+    /// This class stores all the videogame data.
+    /// </summary>
     public partial class Videojuego: UserControl
     {
-        //Properties
+        /// <summary>
+        /// Properties.
+        /// </summary>
 
         string name;
         string path;
         string imagePath;
 
+        /// <summary>
+        /// This event handler captures the run event.
+        /// </summary>
         public event EventHandler runHandler;
+        /// <summary>
+        /// This event handler captures the properties event.
+        /// </summary>
         public event EventHandler propertiesHandler;
+        /// <summary>
+        /// This event handler captures the delete event.
+        /// </summary>
         public event EventHandler deleteHandler;
 
-        //Constructors
-
+        /// <summary>
+        /// Empty constructor that sets all the fields to its empty value.
+        /// </summary>
         public Videojuego()
         {
             InitializeComponent();
@@ -33,6 +48,9 @@ namespace CustomControlsProject
             path = "";
         }
 
+        /// <summary>
+        /// Constructor that only recives the game path as parameter.
+        /// </summary>
         public Videojuego(string path)
         {
             InitializeComponent();
@@ -41,6 +59,9 @@ namespace CustomControlsProject
             this.path = path;
         }
 
+        /// <summary>
+        /// Constructor that receives the game path as parameter and the game name.
+        /// </summary>
         public Videojuego(string path, string name)
         {
             InitializeComponent();
@@ -52,6 +73,9 @@ namespace CustomControlsProject
             lb_name.Text = name;
         }
 
+        /// <summary>
+        /// Constructor that receives the game path as parameter and the game name.
+        /// </summary>
         public Videojuego(string path, string name, string imagePath)
         {
             InitializeComponent();
@@ -66,8 +90,10 @@ namespace CustomControlsProject
             pb_Image.Load(imagePath);
         }
 
-        //Actions
 
+        /// <summary>
+        /// This method opens the game.
+        /// </summary>
         public void RunGame(object sender, EventArgs e)
         {
             try
@@ -83,18 +109,31 @@ namespace CustomControlsProject
             }
         }
 
-        //Getters
-
+        /// <summary>
+        /// This method returns the game.
+        /// </summary>
+        /// <returns>
+        /// The name of the game.
+        /// </returns>
         public string GetName()
         {
             return name;
         }
 
+        /// <summary>
+        /// This method returns the path.
+        /// </summary>
+        /// <returns>
+        /// The game executable path.
+        /// </returns>
         public string GetPath()
         {
             return path;
         }
 
+        /// <summary>
+        /// This method returns the image path.
+        /// </summary>
         public string GetImagePath()
         {
             return imagePath;
@@ -102,31 +141,49 @@ namespace CustomControlsProject
 
         //Setters
 
+        /// <summary>
+        /// This method sets the game name.
+        /// </summary>
         public void SetName(string name)
         {
             this.name = name;
         }
 
+        /// <summary>
+        /// This method sets the game path.
+        /// </summary>
         public void SetPath(string path)
         {
             this.path = path;
         }
 
+        /// <summary>
+        /// This method sets the image path.
+        /// </summary>
         public void SetImage(string imagePath)
         {
             this.imagePath = imagePath;
         }
 
+        /// <summary>
+        /// This method invokes the run handler listener.
+        /// </summary>
         private void tsmi_run_Click(object sender, EventArgs e)
         {
             runHandler?.Invoke(this, e);
         }
 
+        /// <summary>
+        /// This method invokes the properties handler listener.
+        /// </summary>
         private void tsmi_properties_Click(object sender, EventArgs e)
         {
             propertiesHandler?.Invoke(this, e);
         }
 
+        /// <summary>
+        /// This method invokes the delete handler listener.
+        /// </summary>
         private void tsmi_delete_Click(object sender, EventArgs e)
         {
             deleteHandler?.Invoke(this, e);

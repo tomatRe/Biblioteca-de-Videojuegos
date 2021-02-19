@@ -13,6 +13,11 @@ using System.Windows.Forms;
 
 namespace bibliotecaVideojuegos
 {
+
+    /// <summary>
+    /// This class its the core of the aplication.
+    /// It handles the main screen and loads the videogames.
+    /// </summary>
     public partial class MainScreen : Form
     {
         static string preferencesPath = "settings.ini";
@@ -21,6 +26,9 @@ namespace bibliotecaVideojuegos
 
         Videojuego LastSelected;
 
+        /// <summary>
+        /// Empty constructor that loads all the videogames located at "settings.ini"
+        /// </summary>
         public MainScreen()
         {
             gamePaths = new List<string>();
@@ -30,7 +38,9 @@ namespace bibliotecaVideojuegos
             LoadGames();
         }
 
-        //Save the stored games information on a file
+        /// <summary>
+        /// Save the stored games information on a file
+        /// </summary>
 
         public void SavePreferences(string[] preferences)
         {
@@ -59,8 +69,9 @@ namespace bibliotecaVideojuegos
             }
         }
 
-
-        //Load the stored games information
+        /// <summary>
+        /// Load the stored games information
+        /// </summary>
         public void LoadGames()
         {
             flp_panel.Controls.Clear();
@@ -113,7 +124,9 @@ namespace bibliotecaVideojuegos
         }
 
 
-        //Captures the event when the user clicks the image or the label of an item
+        /// <summary>
+        /// Captures the event when the user clicks the image or the label of an item
+        /// </summary>
         private void Juego_MouseClick(object sender, MouseEventArgs e)
         {
 
@@ -136,7 +149,10 @@ namespace bibliotecaVideojuegos
                 LastSelected = (Videojuego)lb_game.Parent.Parent;
         }
 
-        //Loads the games path only
+
+        /// <summary>
+        /// Loads the games path only
+        /// </summary>
         private void LoadPaths()
         {
             if (File.Exists(preferencesPath))
@@ -150,8 +166,9 @@ namespace bibliotecaVideojuegos
             }
         }
 
-        //Hide the labels, button and image
-
+        /// <summary>
+        /// Hide the labels, button and image
+        /// </summary>
         public void HideEmptyLibraryHint()
         {
             lb_addGame.Enabled = false;
@@ -164,7 +181,9 @@ namespace bibliotecaVideojuegos
             pb_empty.Visible = false;
         }
 
-        //Show the labels, button and image
+        /// <summary>
+        /// Show the labels, button and image
+        /// </summary>
         public void ShowEmptyLibraryHint()
         {
             lb_addGame.Enabled = true;
@@ -177,18 +196,27 @@ namespace bibliotecaVideojuegos
             pb_empty.Visible = true;
         }
 
+        /// <summary>
+        /// Add game event when the screen its empty
+        /// </summary>
         private void lb_addGame_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AddView addGame = new AddView(this);
             addGame.ShowDialog();
         }
 
+        /// <summary>
+        /// Add game event from the upper left corner
+        /// </summary>
         private void bt_add_Click(object sender, EventArgs e)
         {
             AddView addGame = new AddView(this);
             addGame.ShowDialog();
         }
 
+        /// <summary>
+        /// Runs the specified game from the contextual menu
+        /// </summary>
         private void tsmi_run_Click(object sender, EventArgs e)
         {
             if (LastSelected != null)
@@ -197,6 +225,9 @@ namespace bibliotecaVideojuegos
             }
         }
 
+        /// <summary>
+        /// Opens the properties window from the contextual menu
+        /// </summary>
         private void tsmi_properties_Click(object sender, EventArgs e)
         {
             AddView addGame = new AddView(this);
@@ -204,6 +235,9 @@ namespace bibliotecaVideojuegos
             addGame.ShowDialog();
         }
 
+        /// <summary>
+        /// Deletes the game from the contextual menu
+        /// </summary>
         private void tsmi_delete_Click(object sender, EventArgs e)
         {
             try
@@ -269,6 +303,9 @@ namespace bibliotecaVideojuegos
             }
         }
 
+        /// <summary>
+        /// Exits the program
+        /// </summary>
         private void bt_exit_Click(object sender, EventArgs e)
         {
             this.Close();
